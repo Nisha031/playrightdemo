@@ -2,10 +2,10 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
   await page.goto('https://alcsaws.teamlease.com/GUI/Login/Login.aspx');
-  await page.getByPlaceholder('Login ID').click();
+  
   await page.getByPlaceholder('Login ID').fill('T4297');
-  await page.getByPlaceholder('Password').click();
-  await page.getByPlaceholder('Password').click();
+
+  
   await page.getByPlaceholder('Password').fill('18@december');
   await page.getByRole('button', { name: 'Sign in' }).click();
   await page.getByRole('link', { name: 'menu' }).click();
@@ -18,5 +18,5 @@ test('test', async ({ page }) => {
   await page.getByRole('treeitem', { name: 'Assam' }).click();
   await page.goto('http://alcsaws.teamlease.com//GUI/Associate/SalaryCalculator.aspx');
   await page.getByTitle('--Select Zone--').click();
-  await page.goto('http://alcsaws.teamlease.com//GUI/Associate/SalaryCalculator.aspx');
+  // await page.goto('http://alcsaws.teamlease.com//GUI/Associate/SalaryCalculator.aspx');
 });
